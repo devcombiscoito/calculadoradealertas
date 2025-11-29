@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+    <html class="html" lang="pt-br">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Somador de Alerta</title>
+            <style>
+                /* Definindo variáveis CSS para um esquema de cores consistente */
+                :root {
+                    --primary-color: #007BFF; /* Um azul profissional */
+                    --text-color: #333;      /* Texto escuro para melhor legibilidade */
+                    --background-color: #FFFFFF; /* Fundo branco limpo */
+                    --card-bg: #F8F9FA;      /* Fundo suave para o container */
+                    --shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para profundidade */
+                    --footer-bg: #343A40;    /* Fundo escuro para o rodapé */
+                    --footer-text: #FFFFFF;  /* Texto branco para o rodapé */
+                }
+
+                .html, .body {
+                    height: 100%;
+                    margin: 0;
+                    padding: 0;
+                }
+
+                .html {
+                    background-color: var(--background-color);
+                    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fonte moderna e limpa */
+                    color: var(--text-color);
+                    line-height: 1.6; /* Melhor espaçamento entre linhas */
+                }
+                
+                .body {
+                    display: flex;
+                    flex-direction: column;
+                    min-height: 100vh;
+                }
+
+                .navbar {
+                    background-color: var(--primary-color);
+                    color: var(--footer-text);
+                    padding: 1rem 0;
+                    text-align: center;
+                    position: sticky;
+                    top: 0;
+                    z-index: 1000;
+                    box-shadow: var(--shadow);
+                }
+
+                .navbar h1 {
+                    margin: 0;
+                    font-size: 1.5rem;
+                }
+                
+                .main {
+                    flex: 1;
+                    padding: 2rem 1rem;
+                    display: flex;
+                    justify-content: center;
+                    align-items: flex-start;
+                }
+
+                .container {
+                    background-color: var(--card-bg);
+                    padding: 2rem;
+                    border-radius: 8px; /* Cantos arredondados */
+                    box-shadow: var(--shadow);
+                    max-width: 600px;
+                    width: 100%;
+                }
+
+                .footer {
+                    background-color: var(--footer-bg);
+                    color: var(--footer-text);
+                    text-align: center;
+                    padding: 1rem 0;
+                    flex-shrink: 0;
+                    /* Removi 'position: fixed;' e 'bottom: 0;' para um rodapé que segue o conteúdo */
+                }
+            </style>
+        </head>
+        <body class="body">
+            <header class="navbar">
+                <nav>
+                    <h1>Somador de Alerta</h1>
+                </nav>
+            </header>
+            
+            <main class="main">
+                <div class="container">
+                    <h1>Bem-vindo ao Somador Interativo!</h1>
+                    <p>Esta é uma ferramenta simples e elegante desenvolvida em HTML, CSS e JavaScript. Nosso objetivo é demonstrar a funcionalidade básica de interação com o usuário através de alertas (<code>alert()</code>) e entradas de dados (<code>prompt()</code>).</p>
+                    
+                    <h2>Como funciona?</h2>
+                    <p>Ao recarregar a página, um script JavaScript é executado imediatamente. Ele solicitará que você insira dois números. Após a inserção, um alerta exibirá a soma exata dos valores fornecidos.</p>
+                    
+                    <h2>Experimente agora!</h2>
+                    <p>Basta <strong>recarregar a página</strong> para iniciar a experiência. Teste a funcionalidade e veja a mágica do JavaScript acontecer!</p>
+                </div>
+
+            </main>
+
+            <footer class="footer">
+                <p>Recarregue a página e some nos alertas.</p>
+            </footer>
+
+            <script src="script.js" defer></script>
+        </body>
+    </html>
